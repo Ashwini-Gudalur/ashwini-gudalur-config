@@ -9,7 +9,7 @@
 "type": "patientInformation",
                 "displayOrder": 0,
                 "ageLimit": 100,
-                "patientAttributes": ["SCP Status","Blood Group Status","Is_Sangam","Is_Premium_Paid"],
+                "patientAttributes": ["SCP Status","Blood Group Status","Is_Sangam","Is_Premium_Paid","CMCHIS Card Number"],
                 "addressFields": [
                     "address1",
                     "address2",

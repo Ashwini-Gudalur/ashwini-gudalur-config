@@ -8,7 +8,7 @@ so.name as "Sale order",
 so.amount_untaxed as "Total Billed",
 so.discount_amount as "Discount Amount",
 so.amount_total as "To Pay",
-cast(sol.create_date as date)
+cast(so.create_date as Date)
 FROM sale_order so
 INNER join sale_order_line sol on sol.order_id=so.id
 INNER JOIN res_partner_attributes rpa on rpa.partner_id=so.partner_id
@@ -28,6 +28,6 @@ WHERE product_id IN(
               so.amount_untaxed ,
               so.discount_amount ,
               so.amount_total ,
-              sol.create_date,
+              so.create_date,
               rpa."x_Is_Tribal"
      order by rp.name asc;

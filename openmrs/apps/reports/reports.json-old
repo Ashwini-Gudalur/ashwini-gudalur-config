@@ -338,13 +338,6 @@
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/bedgrantpatientdetails.sql"
         }
     },
-	"ippatientswithdiagnosis":{
-        "name":"IP Patients with Diagnosis",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/ipwithdiag.sql"
-        }
-    },
 	"patientswithlabtestresultsreport":{
         "name": "Patients With Lab Test Results Report",
         "type": "ERPGeneric",
@@ -380,34 +373,6 @@
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labrevenuereport.sql"
         }
 	},
-	"labbilledbreakdownbyclaimtype":{
-        "name": "lab billed breakdown by Claim type",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labbillbreakdownbyclaimtype.sql"
-        }
-	},
-	"labbillcollectedbreakdownbyclaimtype":{
-        "name": "lab bill collected breakdown by Claim type",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labbillcollectedbreakdownbyclaimtype.sql"
-        }
-	},
-	"medicinebilledbreakdownbyclaimtype":{
-        "name": "Medicine billed breakdown by Claim type",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinebillbreakdownbyclaimtype.sql"
-        }
-	},
-	"medicinebillcollectedbreakdownbyclaimtype":{
-        "name": "medicine bill collected breakdown by Claim type",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinebillcollectedbreakdownbyclaimtype.sql"
-        }
-	},
 	"procedurecount":{
         "name": "Procedure Count",
         "type": "ERPGeneric",
@@ -437,21 +402,14 @@
         }
     },
 	"stockmove":{
-        "name": "Stock Move to Area Report",
+        "name": "Stock Move Report",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/stockmoverepo.sql"
         }
     },
-	"stockmoveall":{
-        "name": "Stock Move all location report",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/stockmoverepoall.sql"
-        }
-    },
 	"nameOfReport":{
-    "name": "Normal/Abnormal lab results",
+    "name": "Report Name",
     "type": "labOrders",
     "config": {
         "patientAttributes": ["caste", "class", "education", "occupation", "primaryContact"],
@@ -478,148 +436,11 @@
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medilist.sql"
         }
     },
-	"Lastmove30":{
-        "name": "Products not sold in past 30 days",
-        "type": "ERPGeneric", 
-        "config": {
-			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove30.sql"
-        }
-    },
-		"Lastmove60":{
-        "name": "Products not sold in past 60 days",
-        "type": "ERPGeneric", 
-        "config": {
-			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove60.sql"
-        }
-    },
-	"Lastmove90":{
-        "name": "Products not sold in past 90 days",
-        "type": "ERPGeneric", 
-        "config": {
-			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove180.sql"
-        }
-    },
-	"Lastmove180":{
-        "name": "Products not sold in past 180 days",
-        "type": "ERPGeneric", 
-        "config": {
-			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove90.sql"
-        }
-    },
-		"Claimtype":{
-        "name": "Patient Claim Type Details",
-        "type": "ERPGeneric", 
-        "config": {
-			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/claimtype.sql"
-        }
-    },
-		"medisaleprice":{
-			"name": "Medicine sales price list",
-			"type": "ERPGeneric", 
-			"config": {
-			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medisaleprice.sql"
-        }
-    },
-	"nilstockreport":{
-			"name": "Nil Stock Report",
-			"type": "ERPGeneric", 
-			"config": {
-			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/nilstockreport.sql"
-        }
-    },
-		"medicinesaledetailedbill":{
-			"name": "Medicine sale detailed report",
-			"type": "ERPGeneric", 
-			"config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesaledetailedbill.sql"
-        }
-    },
-		"labdetailbill":{
-			"name": "Lab bill detail report",
-			"type": "ERPGeneric", 
-			"config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labdetailbill.sql"
-        }
-    },
-	"dentaldetailbill":{
-			"name": "Dental bill detail report",
-			"type": "ERPGeneric", 
-			"config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/dentaldetailbill.sql"
-        }
-    },
-	"generaldetailbill":{
-			"name": "General bill detail report",
-			"type": "ERPGeneric", 
-			"config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generaldetailbill.sql"
-        }
-    },
-	"purchaseanalysis":{
-			"name": "Purchase Analysis",
-			"type": "ERPGeneric", 
-			"config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/po.sql"
-        }
-    },
-	"Ippatients":{
-			"name": "IP Patients Billing Details",
-			"type": "ERPGeneric", 
-			"config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/ippatients.sql"
-        }
-    },
     "sicklecellpatientdetails":{
         "name":"SickleCell Patient Treatment Bill Details",
         "type":"ERPGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/sicklecellpatientdetails.sql"
-        }
-	},
-	"medicinesalebypercentage":{
-        "name":"Medicine Sale by Percentage ",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesalepercentage.sql"
-        }
-	},
-	"Patients":{
-        "name":"Patients",
-        "type":"MRSGeneric",
-        "config":{
-		"dateRangeRequired": false,
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/gahpatients.sql"
-        }
-
-    },
-	"temp":{
-        "name":"temp_MRS",
-        "type":"MRSGeneric",
-        "config":{
-		"dateRangeRequired": false,
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/temppatient.sql"
-        }
-
-    },
-    "sicklecellpatientdetailsmedicine":{
-        "name":"SickleCell Patient OP - Medicine Bill Details",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/sicklecellpatientdetailsmedicine.sql"
-        }
-    },
-	"totalmedicinesaleipop":{
-        "name":"Total Medicine Sale IP/OP",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/totalmedicinesaleipop.sql"
         }
     }
   }

@@ -46,7 +46,9 @@
                 "Blood Pressure":{
                     "isTabular": true
                 },
-
+		 "Follow up Date": {
+                        "allowFutureDates": true
+                },
 	"Chief Complaint Data": {
         "answersConceptName": "Chief Complaint Answers",
         "codedConceptName":"Chief Complaint",
