@@ -6,6 +6,7 @@ FROM stock_report_prodlots srp
 RIGHT JOIN product_template pt on pt.id=srp.product_id
 INNER JOIN stock_location sl ON sl.id = srp.location_id
 WHERE 	srp.location_id IN (14,15,59)
+AND srp.product_id  not in (3087,2138)
 GROUP BY sl.name,pt.name,srp.product_id
 HAVING 
 	SUM(CASE WHEN srp.qty<0 then '0.000'
