@@ -98,6 +98,5 @@
     "icon": "fa-tasks",
     "order": 2,
     "requiredPrivilege": "app:clinical"
-
   }
 }
