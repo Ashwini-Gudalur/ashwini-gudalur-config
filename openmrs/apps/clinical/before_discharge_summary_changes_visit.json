@@ -5,7 +5,7 @@
         "printing": {
             "title": "Bahmni",
             "header": "Visit",
-            "logo": "../images/gudalur-icon.png"
+            "logo": "../images/gudlur.png"
         },
         "defaultSections": true,
         "sections": {
@@ -41,11 +41,11 @@
         }
     },
     "dischargeSummary":{
-        "title": "Discharge Summary",
+        "translationKey": "DASHBOARD_TAB_DISCHARGE_SUMMARY_KEY",
         "printing": {
-            "title": "GUDALUR ADIVASI HOSPITAL",
+            "title": "Bahmni",
             "header": "Discharge Summary",
-            "logo": "../images/Ashwin-logo.png"
+            "logo": "../images/gudlur.png"
         },
         "sections": {
             "PatientInformation":{
@@ -53,18 +53,19 @@
                 "displayOrder": 0,
                 "config": {
                     "title": "PatientInformation",
-                    "patientAttributes": ["caste", "class", "education","debt", "distanceFromCenter", "isUrban", "cluster","RationCard", "familyIncome"],
+                    "patientAttributes": ["caste", "class", "education", "occupation", "debt", "distanceFromCenter", "isUrban", "cluster","RationCard", "familyIncome"],
                     "addressFields": ["address1", "address2", "cityVillage", "countryDistrict"]
                 }
             },
             "admissionDetails":{
-				"type": "admissionDetails",
-				"config": {
-					"showDetailsButton": true,
-					"title": "Admission Details"
-			},
-				"displayOrder": 1
-			},
+                "type": "admissionDetails",
+                "displayOrder": 1,
+                "config": {
+                    "showDetailsButton": true,
+                    "translationKey": "DISCHARGE_SUMMARY_ADMISSION_DETAILS_KEY"
+
+                }
+            },
             "weightInitial":{
                 "type": "observation",
                 "displayOrder": 2,
@@ -84,66 +85,38 @@
                 }
             },
             "diagnoses":{
-				"type": "diagnosis",
-				"config": {
-				"title": "Diagnoses",
-				"showCertainty": false,
-				"showOrder": false,
-				"showDetailsButton": true
-			},
-				"displayOrder": 4
-		},
-		 "History":{
-            "type": "observation",
-            "displayOrder": 5,
-            "title": "History and Examination Notes",
-			"conceptNames": false,
-			"config": {
-			"showGroupDateTime": false,
-					"conceptNames": [
-					"History and Examination Notes"
-                   ],
-						"scope": "latest",
-						"numberOfVisits": "1"
+                "type": "diagnosis",
+                "displayOrder": 4,
+                "config": {
+                    "translationKey" : "DISCHARGE_SUMMARY_DIAGNOSIS_KEY",
+                    "showCertainty": false,
+                    "showOrder": false,
+                    "showDetailsButton": true
                 }
             },
             "clinicalNotes":{
-            "type": "observation",
-            "displayOrder": 5,
-            "translationKey": "DISCHARGE_SUMMARY_CLINICAL_NOTES_KEY",
-			"config": {
-			"showGroupDateTime": false,
-					"conceptNames": [
-                    "History and Examination Notes",
-					"Hospital Course",
-                    "Lab Investigation Notes",
-                    "Radiology Notes"
-                   ],
-						"scope": "latest",
-						"numberOfVisits": "1"
+                "type": "observation",
+                "displayOrder": 5,
+                "translationKey": "DISCHARGE_SUMMARY_CLINICAL_NOTES_KEY",
+                "config": {
+                    "conceptNames": [
+                        "History and Examination Notes",
+                        "Discharge Summary",
+                        "Lab Investigation Notes",
+                        "Radiology Notes",
+                        "Other Notes"
+                    ],
+                    "scope": "latest",
+                    "numberOfVisits": "1"
                 }
             },
-				"Surgery Notes": {
-				"type": "observation",
-				"title": "Surgery Notes",
-				"config": {
-				"showGroupDateTime": false,
-				  "conceptNames": [
-					"Date of Operation",
-					"Operative Procedure"
-				  ],
-				  "scope": "latest",
-				  "numberOfVisits": "1"
-				},
-				"displayOrder": 9
-			  },
             "labInvestigations":{
                 "type": "investigationResult",
                 "displayOrder": 6,
                 "config": {
                     "title": "Lab Investigations",
                     "translationKey":"LAB_INVESTIGATION",
-                    "showChart": false,
+                    "showChart": true,
                     "showTable": false,
                     "showNormalLabResults": true,
                     "showCommentsExpanded": true,
@@ -159,30 +132,37 @@
                 "config": {
                     "translationKey": "DISCHARGE_SUMMARY_TREATMENTS_KEY",
                     "showFlowSheet": false,
-                    "showListView": false,
-                    "showOtherActive": false,
-                    "showDetailsButton": false,
-                    "showRoute": false,
-                    "showDrugForm": false
+                    "showListView": true,
+                    "showOtherActive": true,
+                    "showDetailsButton": true,
+                    "showRoute": true,
+                    "showDrugForm": true
                 }
             },
-				"adviceOnDischarge": {
-				"type": "observation",
-				"title": "Advice on Discharge",
-				"config": {
-				"showGroupDateTime": false,
-					"conceptNames": [
-					"Advice on Discharge",
-					"Discharge Medicine",
-					"Additional Advice on Discharge",
-					"Follow up Date",
-					"Discharge Summary, Plan for follow up"
-          ],
-				"scope": "latest"
-        },
-			"displayOrder": 10
-      }
-      }
+            "adviceOnDischarge":{
+                "type": "observation",
+                "displayOrder": 8,
+                "translationKey":"DISCHARGE_SUMMARY_ADVICE_ON_DISCHARGE_KEY",
+                "config": {
+                    "conceptNames": [
+                        "Additional Advice on Discharge",
+                        "Follow up Date",
+                        "Discharge Summary, Plan for follow up"
+                    ],
+                    "scope": "latest"
+                }
+            },
+        "dischargeNotes":{
+        "type": "observation",
+        "title": "Discharge Summary",
+        "displayOrder": 9,
+         "translationKey": "Discharge Summary",
+        "config": {
+          "conceptNames": ["Discharge Summary"],
+         "numberOfVisits": "1"
+        }
+      	}
+        }
  
     },
     "prescription":{

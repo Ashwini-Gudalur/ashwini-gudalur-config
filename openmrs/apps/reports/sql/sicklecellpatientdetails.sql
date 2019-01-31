@@ -1,7 +1,6 @@
 SELECT rp.name,rp.ref,rpa.address2 as address1, rpt."x_Is_Tribal",spe.gender,
   date_part('year',age(spe.birthdate)) as age, sv.diagnoses,
-  sv.visit_startdate as admitdate,sv.visit_stopdate as dischargedate,
-  sum(vsr.amount_total+vsr.discount_amount) billed,sum(paid) paid from syncjob_visit sv
+  sv.visit_startdate as admitdate,sv.visit_stopdate as dischargedate from syncjob_visit sv
   inner join claim_type ct on ct.erp_patient_id=sv.erp_patient_id and ct.claim_type='1'
   LEFT JOIN res_partner_address rpa on sv.erp_patient_id=rpa.partner_id
   LEFT JOIN syncjob_patient_extn spe on spe.erp_id = sv.erp_patient_id

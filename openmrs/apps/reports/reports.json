@@ -1,6 +1,6 @@
 {
     "chiefComplaintReport":{
-        "name": "Chief Complaint Report",
+        "name": "Clinical Chief Complaint Report",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
@@ -10,39 +10,39 @@
         }
     },
     "inpatientMorbidity":{
-        "name": "Inpatient Morbidity",
+        "name": "Clinical Inpatient Morbidity",
         "type": "diagnosisCount",
         "config": {
             "visitTypes": ["IPD"]
         }
     },
     "outpatientMorbidity":{
-        "name": "Outpatient Morbidity",
+        "name": "Clinical Outpatient Morbidity",
         "type": "diagnosisCount",
         "config": {
             "visitTypes": ["OPD"]
         }
     },
     "laboratoryServices":{
-        "name": "Laboratory Services",
+        "name": "Clinical Laboratory Services",
         "type": "TestCount"
     },
     "genericLaboratoryServices":{
-        "name": "Generic Laboratory Services",
+        "name": "Clinical Generic Laboratory Services",
         "type": "ElisGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/testCount.sql"
         }
     },
     "genericOutpatientMorbidity":{
-        "name": "Generic Outpatient Morbidity",
+        "name": "Clinical Generic Outpatient Morbidity",
         "type": "MRSGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/diagnosisCountOPD.sql"
         }
     },
     "bloodPressure":{
-        "name": "Blood Pressure",
+        "name": "Clinical Blood Pressure",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
@@ -53,7 +53,7 @@
         }
     },
     "smokingHistoryReport":{
-        "name": "Smoking History Report",
+        "name": "Clinical Smoking History Report",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
@@ -63,7 +63,7 @@
         }
     },
     "vitalsTemplateReport":{
-        "name": "Vitals Template Report",
+        "name": "Clinical Vitals Template Report",
         "type": "obsTemplate",
         "config": {
             "templateName": "Vitals",
@@ -72,14 +72,14 @@
         }
     },
     "tuberculosisIntakeTemplateReport":{
-        "name": "Tuberculosis Intake Template Report",
+        "name": "Clinical Tuberculosis Intake Template Report",
         "type": "obsTemplate",
         "config": {
             "templateName": "Tuberculosis Intake Template"
         }
     },
     "diabetes":{
-        "name": "Diabetes",
+        "name": "Clinical Diabetes",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
@@ -88,7 +88,7 @@
         }
     },
     "codedValueRangeBasedReport":{
-        "name": "Coded Value Range Based Report",
+        "name": "Clinical Coded Value Range Based Report",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
@@ -97,11 +97,11 @@
         }
     },
     "OPD/IPDVisitCount":{
-	    "name": "OPD/IPD Visit Count",
+	    "name": "Clinical OPD/IPD Visit Count",
     	"type": "IpdOpdVisitCount"
     },
     "haemoglobinRangeBasedReport":{
-	    "name": "Haemoglobin Range Based Report",
+	    "name": "Clinical Haemoglobin Range Based Report",
     	"type": "NumericConceptValuesCount",
         "config": {
             "rangeGroupName": "Haemoglobin",
@@ -111,21 +111,21 @@
         }
     },
     "radiology(X-Ray)Count":{
-	    "name": "Radiology(X-Ray) Count",
+	    "name": "Clinical Radiology(X-Ray) Count",
     	"type": "ObsCountByConceptClass",
         "config": {
             "conceptClassNames": ["Radiology"]
         }
     },
     "obsValuesCountsForAlbuminMCHOperationDateAndPosture(bloodPressure)":{
-	    "name": "Obs Values Counts for Albumin, MCH, Operation Date and Posture(blood pressure)",
+	    "name": "Clinical Obs Values Counts for Albumin, MCH, Operation Date and Posture(blood pressure)",
     	"type": "ObsValueCount",
         "config": {
             "conceptNames": ["Albumin","MCH","Date of Operation","Posture"]
         }
     },
     "tuberculosisTreatmentCompletionDates":{
-	    "name": "Tuberculosis Treatment Completion dates",
+	    "name": "Clinical Tuberculosis Treatment Completion dates",
         "type": "DateConceptValuesPatientsList",
         "config": {
             "conceptNames": ["Tuberculosis, Treatment Completion Date"],
@@ -133,7 +133,7 @@
         }
     },
     "patientsListWithAlbuminMCHAndHIVELISA(Blood)TestsResults":{
-        "name": "Patients list with Albumin, MCH and HIV ELISA (Blood) tests results",
+        "name": "Clinical Patients list with Albumin, MCH and HIV ELISA (Blood) tests results",
         "type": "PatientsWithLabtestResults",
         "config": {
             "conceptNames": ["HIV ELISA (Blood)","Albumin","MCH"],
@@ -141,7 +141,7 @@
             }
     },
     "IPDPatientsReport":{
-        "name": "IPD Patients Report",
+        "name": "IP-Billing - IPD Patients Report",
         "type": "ipdPatients",
         "config": {
             "addressAttributes": ["address1", "city_village"],
@@ -151,7 +151,7 @@
         }
 	},
     "nutritionProgramNutritionalStatusOfRegisteredChildren":{
-        "name": "Nutrition Program - Nutritional status of registered children",
+        "name": "Clinical Nutrition Program - Nutritional status of registered children",
         "type": "obsCount",
         "config": {
             "ageGroupName": "All Ages",
@@ -161,21 +161,21 @@
         }
     },
     "patientsProgramStateCountReport":{
-        "name": "Patients Program State Count Report",
+        "name": "Clinical Patients Program State Count Report",
         "type": "programStateCount",
         "config": {
             "programName": "Malaria Program"
         }
     },
     "programPatientStateReport":{
-        "name": "Program Patient State Report",
+        "name": "Clinical Program Patient State Report",
         "type": "PatientProgramReport",
         "config": {
             "programName": "Malaria Program"
         }
     },
     "programStateTransitionReport":{
-        "name":"Program State Transition Report",
+        "name":"Clinical Program State Transition Report",
         "type":"programStateTransitionReport",
         "config":{
             "programName":"Malaria Program"
@@ -183,7 +183,7 @@
 
     },
     "OrderFulfillmentReport":{
-        "name": "Order Fulfillment Report",
+        "name": "Clinical Order Fulfillment Report",
         "type": "OrderFulfillmentReport",
         "config": {
             "type": "OrderFulfillmentReport",
@@ -191,7 +191,7 @@
         }
     },
     "visitReport":{
-        "name": "Visit Report",
+        "name": "Clinical Visit Report",
         "type": "visitReport",
         "config": {
             "personAttributes": ["Visiting","caste", "class", "education", "occupation","Contact Number"],
@@ -199,11 +199,11 @@
         }
 	  },
     "patientReport":  {
-      "name": "Patient Information",
+      "name": "Clinical Patient Information",
       "type": "PatientReport"
     },
     "diagnosisCountReport":{
-    	"name": "Diagnosis Report",
+    	"name": "Clinical Diagnosis Report",
  		"type": "diagnosisCount",
  		"config": {
   				 "dateRangeRequired": true, 
@@ -216,28 +216,28 @@
 				}
 	},
 	 "labtestreferredoutReport":{
-        "name": "Lab test Referred-Out Report",
+        "name": "Laboratory - Lab test Referred-Out Report",
         "type": "ElisGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/refferalcount.sql"
         }
     },
      "labtestaggregatecount":{
-        "name": "Lab test aggregate count (Tribal and Non-Tribal)",
+        "name": "Laboratory - Lab test aggregate count (Tribal and Non-Tribal)",
         "type": "MRSGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labtesttrintri.sql"
         }
     },
       "labtestvisitaggregatecount":{
-        "name": "Lab test aggregate count(IPD,OPD, ER)",
+        "name": "Laboratory - Lab test aggregate count(IPD,OPD, ER)",
         "type": "MRSGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labtestvisit.sql"
         }
     },
     "deliveryReport":{
-    "name": "Delivery Report",
+    "name": "Clinical Delivery Report",
     "type": "obsCount",
     "config": {
     "ageGroupName": "All Ages",
@@ -247,211 +247,155 @@
     }
  },
     "multipleOrderReport":{
-        "name": "Order Report",
+        "name": "Clinical Order Report",
         "type": "MRSGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/radiologyorder.sql"
         }
     },
     "bedoccupanyrate":{
-        "name":"Bed Utilization Rate",
+        "name":"Clinical Bed Utilization Rate",
         "type":"MRSGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/bor.sql"
         }
     },
     "ipfollowuplist":{
-        "name":"IP Follow Up List",
+        "name":"Clinical IP Follow Up List",
         "type":"MRSGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/ipfollowup.sql"
         }
     },
     "diagnosisReport":{
-        "name":"Patientwise Diagnosis report",
+        "name":"Clinical Patientwise Diagnosis report",
         "type":"MRSGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/patientwisediagnosis.sql"
         }
     },
     "departmentcount":{
-        "name":"Department Wise Report",
+        "name":"Clinical Department Wise Report",
         "type":"MRSGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/department_tribal_non_tribal_count.sql"
         }
     },
     "admissionreport":{
-        "name":"IP Analysis - Tribal/Non tribal IP Admission count",
+        "name":"IP-Billing - IP Analysis - Tribal/Non tribal IP Admission count",
         "type":"MRSGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/admissionvisitcount.sql"
         }
 
     },
-    "scheduleh":{
-        "name":"Schedule H Sales",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/scheduleH.sql"
-        }
-    },
-	    "medicinesalesbypatient":{
-        "name":"Patient Wise Medicine Sales",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesalesbypatientwise.sql"
-        }
-    },
-    "booksales":{
-        "name":"Books Sales",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/booksale.sql"
-        }
-    },
-    "medicinesales":{
-        "name":"Medicine Sales Count",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesale.sql"
-        }
-    },
     "ippatientdetails":{
-        "name":"IP Patient Details",
+        "name":"IP-Billing - IP Patient Details",
         "type":"ERPGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/ippatientdetails.sql"
         }
     },
     "ippatientdetailsbyvillage":{
-        "name":"IP Patient Details By Village",
+        "name":"IP-Billing - IP Patient Details By Village",
         "type":"ERPGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/ippatientdetailsbyvillage.sql"
         }
     },
     "bedgrantpatientdetails":{
-        "name":"Bed Grand Patient Details",
+        "name":"IP-Billing - Bed Grand Patient Details",
         "type":"ERPGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/bedgrantpatientdetails.sql"
         }
     },
 	"ippatientswithdiagnosis":{
-        "name":"IP Patients with Diagnosis",
+        "name":"IP-Billing - IP Patients with Diagnosis",
         "type":"ERPGeneric",
         "config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/ipwithdiag.sql"
         }
     },
 	"patientswithlabtestresultsreport":{
-        "name": "Patients With Lab Test Results Report",
+        "name": "Laboratory - Patients With Lab Test Results Report",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/patients_with_lab_test_results_report.sql"
         }
 	},
 	"hivlabtestperformedpatients":{
-        "name": "HIV lab test performed patients",
+        "name": "Laboratory - HIV lab test performed patients",
         "type": "ElisGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/hiv_lab_test_performed_patients.sql"
         }
     },
 	"labSS":{
-        "name": "Sickle Cell Report",
+        "name": "Laboratory - Sickle Cell Report",
         "type": "ElisGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/sicklecell_Test_performed_patients.sql"
         }
     },
 	"labNBS":{
-        "name": "Sickle Cell NBS Report",
+        "name": "Laboratory - Sickle Cell NBS Report",
         "type": "ElisGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/NBS_Test_performed_patients.sql"
         }
 	},
 	"labrevenuereport":{
-        "name": "Lab Revenue Report ",
+        "name": "Cash point - Lab Revenue Report ",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labrevenuereport.sql"
         }
 	},
 	"labbilledbreakdownbyclaimtype":{
-        "name": "lab billed breakdown by Claim type",
+        "name": "IP-Billing - lab billed breakdown by Claim type",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labbillbreakdownbyclaimtype.sql"
         }
 	},
 	"labbillcollectedbreakdownbyclaimtype":{
-        "name": "lab bill collected breakdown by Claim type",
+        "name": "IP-Billing - lab bill collected breakdown by Claim type",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labbillcollectedbreakdownbyclaimtype.sql"
         }
 	},
 	"medicinebilledbreakdownbyclaimtype":{
-        "name": "Medicine billed breakdown by Claim type",
+        "name": "IP-Billing - Medicine billed breakdown by Claim type",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinebillbreakdownbyclaimtype.sql"
         }
 	},
 	"medicinebillcollectedbreakdownbyclaimtype":{
-        "name": "medicine bill collected breakdown by Claim type",
+        "name": "IP-Billing - Medicine bill collected breakdown by Claim type",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinebillcollectedbreakdownbyclaimtype.sql"
         }
 	},
 	"procedurecount":{
-        "name": "Procedure Count",
+        "name": "IP-Billing - Procedure Count",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/procedurecount.sql"
         }
 	},
-	"totalmedicinesalecount":{
-        "name": "Detailed Medicine Sales Count",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/detamedicinesalecount.sql"
-        }
-    },
-	"medicinesaletotal":{
-        "name": "Total Medicine Sale Amount",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesaletotal.sql"
-        }
-    },
 	"labtestcount":{
-        "name": "Total lab test count",
+        "name": "Laboratory - Total lab test count",
         "type": "ERPGeneric",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labtestcount.sql"
         }
     },
-	"stockmove":{
-        "name": "Stock Move to Area Report",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/stockmoverepo.sql"
-        }
-    },
-	"stockmoveall":{
-        "name": "Stock Move all location report",
-        "type": "ERPGeneric",
-        "config": {
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/stockmoverepoall.sql"
-        }
-    },
 	"nameOfReport":{
-    "name": "Normal/Abnormal lab results",
+    "name": "Laboratory - Normal/Abnormal lab results",
     "type": "labOrders",
     "config": {
         "patientAttributes": ["caste", "class", "education", "occupation", "primaryContact"],
@@ -471,154 +415,245 @@
     }
 },
 	"Medilist":{
-        "name": "Medicine List based on supplier",
-        "type": "ERPGeneric", 
-        "config": {
+			"name": "Inventory - Medicine List based on supplier",
+			"type": "ERPGeneric", 
+			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medilist.sql"
         }
     },
 	"Lastmove30":{
-        "name": "Products not sold in past 30 days",
-        "type": "ERPGeneric", 
-        "config": {
+			"name": "Inventory - Products not sold in past 30 days",
+			"type": "ERPGeneric", 
+			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove30.sql"
         }
     },
 		"Lastmove60":{
-        "name": "Products not sold in past 60 days",
-        "type": "ERPGeneric", 
-        "config": {
+			"name": "Inventory - Products not sold in past 60 days",
+			"type": "ERPGeneric", 
+			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove60.sql"
         }
     },
-	"Lastmove90":{
-        "name": "Products not sold in past 90 days",
-        "type": "ERPGeneric", 
-        "config": {
+		"Lastmove90":{
+			"name": "Inventory - Products not sold in past 90 days",
+			"type": "ERPGeneric", 
+			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove180.sql"
         }
     },
-	"Lastmove180":{
-        "name": "Products not sold in past 180 days",
-        "type": "ERPGeneric", 
-        "config": {
+		"Lastmove180":{
+			"name": "Inventory - Products not sold in past 180 days",
+			"type": "ERPGeneric", 
+			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove90.sql"
         }
     },
 		"Claimtype":{
-        "name": "Patient Claim Type Details",
-        "type": "ERPGeneric", 
-        "config": {
+			"name": "IP-Billing - Patient Claim Type Details",
+			"type": "ERPGeneric", 
+			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/claimtype.sql"
         }
     },
 		"medisaleprice":{
-			"name": "Medicine sales price list",
+			"name": "Inventory - Medicine sales price list",
 			"type": "ERPGeneric", 
 			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medisaleprice.sql"
         }
     },
-	"nilstockreport":{
-			"name": "Nil Stock Report",
+		"nilstockreport":{
+			"name": "Inventory - Nil Stock Report",
 			"type": "ERPGeneric", 
 			"config": {
 			"dateRangeRequired": false,
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/nilstockreport.sql"
         }
     },
+		"medicinesalesbypatient":{
+			"name":"Pharmacy - Patient Wise Medicine Sales",
+			"type":"ERPGeneric",
+			"config":{
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesalesbypatientwise.sql"
+        }
+    },
+	    "medicinesales":{
+			"name":"Pharmacy - Medicine Sales Count",
+			"type":"ERPGeneric",
+			"config":{
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesale.sql"
+        }
+    },
+		"totalmedicinesalecount":{
+			"name": "Pharmacy - Detailed Medicine Sales Count",
+			"type": "ERPGeneric",
+			"config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/detamedicinesalecount.sql"
+        }
+    },
+		"medicinesaletotal":{
+			"name": "Pharmacy - Total Medicine Sale Amount",
+			"type": "ERPGeneric",
+			"config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesaletotal.sql"
+        }
+    },
+	    "scheduleh":{
+			"name":"Pharmacy - Schedule H Sales",
+			"type":"ERPGeneric",
+			"config":{
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/scheduleH.sql"
+        }
+    },
 		"medicinesaledetailedbill":{
-			"name": "Medicine sale detailed report",
+			"name": "Pharmacy - Medicine sale detailed report",
 			"type": "ERPGeneric", 
 			"config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesaledetailedbill.sql"
         }
     },
 		"labdetailbill":{
-			"name": "Lab bill detail report",
+			"name": "Cash point - Lab bill detail report",
 			"type": "ERPGeneric", 
 			"config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labdetailbill.sql"
         }
     },
-	"dentaldetailbill":{
-			"name": "Dental bill detail report",
+	    "labpatientcount":{
+            "name": "Laboratory - Lab patient count datewise",
+            "type": "ERPGeneric", 
+            "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/labpatcountdatewise.sql"
+        }
+    },
+		"dentaldetailbill":{
+			"name": "Cash point - Dental bill detail report",
 			"type": "ERPGeneric", 
 			"config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/dentaldetailbill.sql"
         }
     },
-	"generaldetailbill":{
-			"name": "General bill detail report",
+			"proceduredetailbill":{
+			"name": "Cash point - Procedure bill detail report",
+			"type": "ERPGeneric", 
+			"config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/proceduredetailbill.sql"
+        }
+    },
+		"generaldetailbill":{
+			"name": "Cash point - General bill detail report",
 			"type": "ERPGeneric", 
 			"config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generaldetailbill.sql"
         }
     },
-	"purchaseanalysis":{
-			"name": "Purchase Analysis",
+		"booksales":{
+			"name":"Cash point - Books Sales",
+			"type":"ERPGeneric",
+			"config":{
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/booksale.sql"
+        }
+    },
+		"usgdetailbill":{
+			"name": "Cash point - USG bill detail report",
+			"type": "ERPGeneric", 
+			"config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/usgdetailbill.sql"
+        }
+    },
+		"radiologydetailbill":{
+			"name": "Cash point - Radiology bill detail report",
+			"type": "ERPGeneric", 
+			"config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/radiologydetailbill.sql"
+        }
+    },
+		"generalcheckup":{
+			"name":"Cash point - General body checkup",
+			"type":"ERPGeneric",
+			"config":{
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/generalbodycheckup.sql"
+        }
+    },
+		"purchaseanalysis":{
+			"name": "Inventory - Purchase Analysis",
 			"type": "ERPGeneric", 
 			"config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/po.sql"
         }
     },
-	"Ippatients":{
+		"Ippatients":{
 			"name": "IP Patients Billing Details",
 			"type": "ERPGeneric", 
 			"config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/ippatients.sql"
         }
     },
-    "sicklecellpatientdetails":{
-        "name":"SickleCell Patient Treatment Bill Details",
-        "type":"ERPGeneric",
-        "config":{
+		"sicklecellpatientdetails":{
+			"name":"SickleCell Patient Treatment Bill Details",
+			"type":"ERPGeneric",
+			"config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/sicklecellpatientdetails.sql"
         }
 	},
-	"medicinesalebypercentage":{
-        "name":"Medicine Sale by Percentage ",
-        "type":"ERPGeneric",
-        "config":{
-            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesalepercentage.sql"
-        }
-	},
-	"Patients":{
-        "name":"Patients",
-        "type":"MRSGeneric",
-        "config":{
-		"dateRangeRequired": false,
+		"Patients":{
+			"name":"Patients",
+			"type":"MRSGeneric",
+			"config":{
+			"dateRangeRequired": false,
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/gahpatients.sql"
         }
 
     },
-	"temp":{
-        "name":"temp_MRS",
-        "type":"MRSGeneric",
-        "config":{
-		"dateRangeRequired": false,
+		"temp":{
+			"name":"temp_MRS",
+			"type":"MRSGeneric",
+			"config":{
+			"dateRangeRequired": false,
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/temppatient.sql"
         }
 
     },
-    "sicklecellpatientdetailsmedicine":{
-        "name":"SickleCell Patient OP - Medicine Bill Details",
-        "type":"ERPGeneric",
-        "config":{
+		"sicklecellpatientdetailsmedicine":{
+			"name":"SickleCell Patient OP - Medicine Bill Details",
+			"type":"ERPGeneric",
+			"config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/sicklecellpatientdetailsmedicine.sql"
         }
     },
-	"totalmedicinesaleipop":{
-        "name":"Total Medicine Sale IP/OP",
-        "type":"ERPGeneric",
-        "config":{
+		"stockmove":{
+        "name": "Inventory - Stock Move to Area Report",
+        "type": "ERPGeneric",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/stockmoverepo.sql"
+        }
+    },
+		"medicinesalebypercentage":{
+			"name":"Inventory - Medicine Sale by Percentage ",
+			"type":"ERPGeneric",
+			"config":{
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/medicinesalepercentage.sql"
+        }
+	},
+	"stockmoveall":{
+        "name": "Inventory - Stock Move all location report",
+        "type": "ERPGeneric",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/stockmoverepoall.sql"
+        }
+    },
+		"totalmedicinesaleipop":{
+			"name":"Inventory - Total Medicine Sale IP/OP",
+			"type":"ERPGeneric",
+			"config":{
             "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/totalmedicinesaleipop.sql"
         }
     }
