@@ -108,6 +108,8 @@ class split_in_production_lot_with_price_exten(osv.osv_memory):
                     if (line.expiry_date):
                         if (datetime.strptime(line.expiry_date,'%Y-%m-%d') <= datetime.today()):
                             raise osv.except_osv(_('Processing Error!'), _('End of life should be greater than today'))
+                    else:
+                        raise osv.except_osv(_('Processing Error!'), _('End of life date is a mandatory field'))
         return super(split_in_production_lot_with_price_exten, self).split(cr, uid, ids, move_ids, context)
 split_in_production_lot_with_price_exten()
 

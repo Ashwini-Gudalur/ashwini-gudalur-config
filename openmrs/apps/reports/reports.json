@@ -443,7 +443,7 @@
 			"type": "ERPGeneric", 
 			"config": {
 			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove180.sql"
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove90.sql"
         }
     },
 		"Lastmove180":{
@@ -451,7 +451,7 @@
 			"type": "ERPGeneric", 
 			"config": {
 			"dateRangeRequired": false,
-            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove90.sql"
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/Lastmove180.sql"
         }
     },
 		"Claimtype":{

@@ -1,10 +1,19 @@
-SELECT ROW_NUMBER() OVER (ORDER BY plmr.last_moved_date) as "Sl No",plmr.desc as Product,pc.name as Category,
-sl.name as "Source Location",sll.name as "Dest location",cast(plmr.last_moved_date AS date) as date
-  FROM prod_last_moved_report plmr
-  INNER JOIN stock_location sl on sl.id = plmr.location_id
-  INNER JOIN stock_location sll on sll.id = plmr.location_dest_id
-  INNER JOIN Product_template pt on pt.id = plmr.product_id
-  INNER JOIN product_category pc on pc.id = pt.categ_id
-  WHERE plmr.last_moved_date < NOW() - INTERVAL '180 days'
-  order by plmr.last_moved_date;
-
+SELECT 
+cast(sm.create_date as date) as Last_move_date,
+sm.name,
+pc.name as Category,
+spl.cost_price as CP,
+spl.sale_price as SP,
+cast((spl.cost_price*sm.product_qty)as DECIMAL (10,2)) as "CP Value",
+cast((spl.sale_price*sm.product_qty)as DECIMAL(10,2)) as "SP Value"
+ FROM stock_move sm
+ INNER JOIN (select product_id,max(create_date) as MaxDate
+ 	        from stock_move
+ 	        group by product_id) smm on sm.product_id = smm.product_id and sm.create_date = smm.MaxDate
+ INNER JOIN stock_production_lot spl on spl.id = sm.prodlot_id
+ INNER JOIN Product_template pt on pt.id = sm.product_id
+ INNER JOIN product_category pc on pc.id = pt.categ_id
+ WHERE spl.sale_price is not null
+ AND
+  sm.create_date < NOW() - INTERVAL '180 days'
+ ORDER BY spl.sale_price desc;
